@@ -1,3 +1,13 @@
+# Introduction
+
+This is the react with typescript tutorials. We learn how to use typescript in react. Youtube course link: https://youtube.com/playlist?list=PLprvbQiR3cN8_LJZfcW1hZYGPv70U8lci&si=sq1f-OMbiGpmWd5o
+
+# Install React app template Typescript
+
+We install react app with typescript:
+
+### `npx create-react-app my-app --template typescript`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +54,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Project steps
+
+In typescript if we want to make the variable we have to define type of it. In app.tsx we make some examples of different variable types.
+We make User.tsx component to learn how send elements and get it as props in User component to see typescript syntax.
+We can make 2 kind of functions and we actually make examples in User and User2 components.
