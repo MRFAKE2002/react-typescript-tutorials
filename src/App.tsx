@@ -1,8 +1,10 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import User from "./components/User";
+// libraries
+import React, { useState } from "react";
 
+// css
+import "./App.css";
+
+// types
 // ma mitunim ghabl az function type khasi ro tarif konim va hameja estefade konim hata baghie component dige.
 export type User = { name: string; email: string; age: number };
 type Array4 = (number | string)[];
@@ -12,51 +14,60 @@ function App() {
     dakhel typescript bayad baraye sakht moteghayer 'type' malum konim. alan masalan type 'name' khodesh tashkhis mide string va age ham 
     bekhaim meghdaresh ro taghyir bedim hatman bayad 'string' bashe.
   */
-  let name = "type"; // let name: string = 'type';
-  name = "string";
+  // let name = "type"; // let name: string = 'type';
+  // name = "string";
 
-  let counter: number = 1; // let counter = 1;
-  counter = 2;
+  // let counter: number = 1; // let counter = 1;
+  // counter = 2;
 
-  let flag: boolean = false; // let flag = false;
-  flag = true;
+  // let flag: boolean = false; // let flag = false;
+  // flag = true;
 
-  // array
-  let array = [1, "string", false];
-  let array1: string[] = ["string"];
-  let array2: number[] = [1, 2, 3];
-  let array3: (number | string | boolean)[] = [];
-  let array4: Array4 = [1, "string"];
+  // // array
+  // let array = [1, "string", false];
+  // let array1: string[] = ["string"];
+  // let array2: number[] = [1, 2, 3];
+  // let array3: (number | string | boolean)[] = [];
+  // let array4: Array4 = [1, "string"];
 
-  // object
-  let object = {
-    name: "string",
-    age: 10,
-    isMarried: false,
-  };
-  let object1: { name: string; age: number; isMarried: boolean } = {
-    name: "string",
-    age: 10,
-    isMarried: false,
-  };
+  // // object
+  // let object = {
+  //   name: "string",
+  //   age: 10,
+  //   isMarried: false,
+  // };
+  // let object1: { name: string; age: number; isMarried: boolean } = {
+  //   name: "string",
+  //   age: 10,
+  //   isMarried: false,
+  // };
 
-  let user: User = {
-    name: "user",
-    email: "user@example.com",
-    age: 10,
-  };
+  // let user: User = {
+  //   name: "user",
+  //   email: "user@example.com",
+  //   age: 10,
+  // };
 
-  // function
-  function sum(a: number, b: number): number {
-    return a + b;
-  }
+  // // function
+  // function sum(a: number, b: number): number {
+  //   return a + b;
+  // }
 
-  sum(2, 2);
+  // sum(2, 2);
+
+
+  /* 
+    dar sakht 'state' shoma mitunid barash type moshakhas konid ya na; chizi ke moheme ine age object gharar bud az samt backend 
+    begirid va gharar bedid va nemidunid ke dakhelesh khalie ya pore pas bayad moshakhas konid ke age 'null' bud khata nade
+    ke in kar bayad ba tayin 'null' be onvan type moshakhas konid. pas ma be surat pishfarz meghdar avalie ro 'null' mizarim.
+
+  */
+  const [state, setState ] = useState<(User | null)>(null)
 
   return (
     <div className="App">
       <h1>Typescript</h1>
-      <hr />
+      {/* <hr />
       <User
         name="user"
         email="user@example.com"
@@ -77,7 +88,14 @@ function App() {
         phoneNumber="091000000"
         strangeType={1234}
         unionType="different"
-      />
+      /> */}
+
+      {/* 
+        alan mikhaim meghdar name ro az 'state' begirim ke khata mide mige age meghdaresh null bashe ke be surat pishfarz ham 'null' 
+        gozashtim in khata mide. pas bayad biaim az '?' estefade konim ta age null bud error nade va aslan neshunesh nade.
+      */}
+      {state?.name}
+
     </div>
   );
 }
