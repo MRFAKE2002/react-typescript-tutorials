@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 // css
 import "./App.css";
+import Article from "./components/Article";
 
 // types
 // ma mitunim ghabl az function type khasi ro tarif konim va hameja estefade konim hata baghie component dige.
@@ -55,14 +56,13 @@ function App() {
 
   // sum(2, 2);
 
-
   /* 
     dar sakht 'state' shoma mitunid barash type moshakhas konid ya na; chizi ke moheme ine age object gharar bud az samt backend 
     begirid va gharar bedid va nemidunid ke dakhelesh khalie ya pore pas bayad moshakhas konid ke age 'null' bud khata nade
     ke in kar bayad ba tayin 'null' be onvan type moshakhas konid. pas ma be surat pishfarz meghdar avalie ro 'null' mizarim.
 
   */
-  const [state, setState ] = useState<(User | null)>(null)
+  const [state, setState] = useState<User | null>(null);
 
   return (
     <div className="App">
@@ -91,11 +91,15 @@ function App() {
       /> */}
 
       {/* 
-        alan mikhaim meghdar name ro az 'state' begirim ke khata mide mige age meghdaresh null bashe ke be surat pishfarz ham 'null' 
+        alan mikhaim meghdar name ro az 'useState' begirim ke khata mide mige age meghdaresh 'null' bashe ke be surat pishfarz ham 'null' 
         gozashtim in khata mide. pas bayad biaim az '?' estefade konim ta age null bud error nade va aslan neshunesh nade.
       */}
-      {state?.name}
+      {/* {state?.name} */}
 
+      <Article>
+        article title
+        <h1>it`s article children</h1>
+      </Article>
     </div>
   );
 }
