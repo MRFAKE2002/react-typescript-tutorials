@@ -68,7 +68,10 @@ function App() {
     ke in kar bayad ba tayin 'null' be onvan type moshakhas konid. pas ma be surat pishfarz meghdar avalie ro 'null' mizarim.
   */
 
-  const [state, setState] = useState<User | null>(null);
+  // const [state, setState] = useState<User | null>(null);
+
+  // const onClickInput = (event:React.MouseEvent<HTMLInputElement, MouseEvent>) => {}
+  // const onChangeButton = (event:React.FormEvent<HTMLButtonElement>) => {}
 
   return (
     <div className="App">
@@ -113,7 +116,10 @@ function App() {
       
       {/* <User3 state={state} setState={setState} /> */}
 
-      <Button buttonTitle="title" />
+      {/* <Button buttonTitle="title" /> */}
+
+      {/* <input type="text" onClick={onClickInput} />
+      <button onChange={onChangeButton}></button> */}
 
     </div>
   );
