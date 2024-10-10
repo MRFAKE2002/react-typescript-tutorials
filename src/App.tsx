@@ -7,6 +7,7 @@ import "./App.css";
 // components
 import Article from "./components/Article";
 import User3 from "./components/User3";
+import Button from "./components/Button";
 
 // types
 // ma mitunim ghabl az function type khasi ro tarif konim va hameja estefade konim hata baghie component dige.
@@ -110,7 +111,9 @@ function App() {
       */}
       {/* {state?.name} */}
       
-      <User3 state={state} setState={setState} />
+      {/* <User3 state={state} setState={setState} /> */}
+
+      <Button buttonTitle="title" />
 
     </div>
   );
