@@ -73,6 +73,8 @@ function App() {
   // const onClickInput = (event:React.MouseEvent<HTMLInputElement, MouseEvent>) => {}
   // const onChangeButton = (event:React.FormEvent<HTMLButtonElement>) => {}
 
+  
+
   return (
     <div className="App">
       <h1>Typescript</h1>
