@@ -1,5 +1,6 @@
 // dar inja mishe baraye 'props' type haye moteghayer baraye component ro moshakhas mikonim.
 
+// alan faghat mitunim ya az "union" estefade konim ya az "different"
 type UnionType = "union" | "different";
 
 export type USER = {
@@ -14,6 +15,18 @@ export type USER = {
   // union type jurie ke shoma entekhab mikonid moteghayer bayad che maghadiri dashte bashe va joz in nabashe
   unionType: UnionType;
 };
+
+// ma age 2 ta type mokhtalef dashte bashim va bekhaim az yekish ersbari konim vali na hamsh balke chandtash hazf beshe bayad az 'Omit' estefade konim.
+type User2 = Omit<USER, "sum" | "strangeType" | "unionType">
+/*
+  type User2 = {
+      name: string;
+      email: string;
+      age: number;
+      hasChildren: boolean;
+      phoneNumber?: string | undefined;
+  }
+*/
 
 // az ounjayi ke 'props' vorudi khodesh object pas mitunim maghadir ro mostaghim begirim.
 // function User(props: {
