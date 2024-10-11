@@ -1,5 +1,5 @@
 // libraries
-import React from "react";
+import React, { useEffect } from "react";
 
 type ArticleChildren = {
   // dar inja chon ma 'children' ke ferestadim az tag ha mesl 'h1' estefade kardim amalan mesl ferestadan element ke type mishe in:

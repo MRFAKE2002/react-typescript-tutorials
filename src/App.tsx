@@ -8,6 +8,7 @@ import "./App.css";
 import Article from "./components/Article";
 import User3 from "./components/User3";
 import Button from "./components/Button";
+// import ArticleComponent from "./components/Article2";
 
 // types
 // ma mitunim ghabl az function type khasi ro tarif konim va hameja estefade konim hata baghie component dige.
@@ -73,7 +74,7 @@ function App() {
   // const onClickInput = (event:React.MouseEvent<HTMLInputElement, MouseEvent>) => {}
   // const onChangeButton = (event:React.FormEvent<HTMLButtonElement>) => {}
 
-  
+
 
   return (
     <div className="App">
@@ -122,6 +123,9 @@ function App() {
 
       {/* <input type="text" onClick={onClickInput} />
       <button onChange={onChangeButton}></button> */}
+
+      {/* <ArticleComponent /> */}
+
 
     </div>
   );
